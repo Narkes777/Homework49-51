@@ -1,0 +1,13 @@
+{% extends 'main/navbar.html' %}
+
+
+{% block div %}
+{% for cat in commentaries %}
+<p>{{cat.comment}}</p>
+<p>{{cat.ann}}</p>
+{% endfor %}
+{% endblock %}
+
+{% block footer%}
+{% bootstrap_pagination page=page_obj%}
+{%endblock%}

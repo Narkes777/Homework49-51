@@ -1,0 +1,12 @@
+{% extends 'main/navbar.html' %}
+
+
+{% block div %}
+{% for cat in categories %}
+<p>{{cat.name}}</p>
+{% endfor %}
+{% endblock %}
+
+{% block footer%}
+{% bootstrap_pagination page=page_obj%}
+{%endblock%}

@@ -1,0 +1,14 @@
+{% extends 'main/navbar.html' %}
+
+
+{% block div %}
+{% for ann in anns %}
+<p>{{ann.product}}</p>
+<p>{{ann.price}}</p>
+<p><a href="{% url 'subcat_detail' pk-ann_pk%}">{{ann.category}}</a></p>
+{% endfor %}
+{% endblock %}
+
+{% block footer%}
+{% bootstrap_pagination page=page_obj%}
+{%endblock%}

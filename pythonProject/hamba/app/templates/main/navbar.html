@@ -1,0 +1,35 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% bootsrtap_css %}
+</head>
+<body>
+    <nav>
+        <div>
+            <ul>
+                <li>
+                    <a href="{% url 'ann_list'%}">Announcement</a>
+                    <a href="{% url 'ann_create' %}">Create Ann</a>
+                </li>
+                <li>
+                    <a href="{% url 'subcat_list' %}">Sub Categories</a>
+                    <a href="{% url 'subcat_create' %}">create Sub Category</a>
+                </li>
+                <li>
+                    <a href="{% url 'cat_list'%}">categories</a>
+                    <a href="{% url 'cat_create'%}">Create category</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block div %}
+    {% endblock %}
+
+    {% block footer%}
+    {% endblock %}
+</body>
+</html>
